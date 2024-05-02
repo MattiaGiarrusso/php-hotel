@@ -39,15 +39,15 @@ $hotels = [
 
 if (isset($_GET['parking']) && !empty($_GET['parking'])) {
 
-    $hotelWithPark = [];
+    $hotelsWithPark = [];
 
     foreach ($hotels as $hotel) {
         $parkingFound = $hotel['parking'] ? 'Si' : 'No';
         if ($parkingFound == $_GET['parking']) {
-            $hotelWithPark[] = $hotel;
+            $hotelsWithPark[] = $hotel;
         }
     }
-    $hotels = $hotelWithPark;
+    $hotels = $hotelsWithPark;
 };
 
 
